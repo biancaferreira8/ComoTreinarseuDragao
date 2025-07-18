@@ -1,55 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
- <!-- Importação de bibliotecas de ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Importação do framework Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Configuração de viewport para dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Como Treinar o Seu Dragão</title>
-<style>
-    h1{
-      color: #a52222;
-      font-family: 'Cinzel', serif;
-      font-size: 3em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    p{
-      color: #030303;
-      font-family: 'Cinzel', serif;
-      font-size: 1em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    h2{
-      color: #00043b;
-      font-family: 'Cinzel', serif;
-      font-size: 2.5em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    h3{
-      color: #030303;
-      font-family: 'Uncial Antiqua', cursive;
-      font-size: 3em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-align: center;
-      margin-bottom: 30px; 
-    }
-    body{
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Treinar o Seu Dragão</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Poppins&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+
+  <!-- Ícones e Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilo -->
+  <style>
+    body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
@@ -60,24 +26,41 @@
       display: flex;
       flex-direction: column;
     }
-    header{
+    header {
       background: linear-gradient(13deg, #1100ff 0%, #043ad1 50%, #161616 100%);
       padding: 2rem 1rem;
       text-align: center;
-      border-bottom: 3xp solid #2b2b2b;
-      color:#ffffff;
-      text-shadow: 0 1xp 3xp rgba(0, 0, 0, 0.3);
-      box-shadow: 0 4xp 6xp rgba(0, 0, 0, 0.1);
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    footer {
-      width: 100%;
-      background: linear-gradient(13deg, #272727 0%, #7e7e7e 50%, #e4e4e4 100%);
-      color: black;
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       text-align: center;
-      padding: 1rem;
-      margin-top: auto;
-      position: relative;
-      left: 0;
+      margin-bottom: 30px;
+    }
+    h1 {
+      color: #a52222;
+      font-size: 3em;
+    }
+    h2 {
+      color: #00043b;
+      font-size: 2.5em;
+    }
+    h3 {
+      font-family: 'Uncial Antiqua', cursive;
+      font-size: 2em;
+      color: #010425;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #030303;
+      font-family: 'Cinzel', serif;
+      font-size: 1.2em;
+      letter-spacing: 1px;
     }
     .carousel {
       max-width: 800px;
@@ -97,10 +80,10 @@
       justify-content: center;
       gap: 30px;
       margin: 40px auto;
-      max-width: 900px;
+      max-width: 1200px;
       flex-wrap: wrap;
       padding: 0 15px;
-     }
+    }
     .caixa {
       background-color: #ffffffdd;
       border-radius: 12px;
@@ -113,123 +96,129 @@
     .caixa:hover {
       transform: scale(1.05);
     }
-    .caixa h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
-      color: #010425;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .caixa img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 15px;
     }
-    .caixa p {
-      font-size: 1rem;
-      text-transform: none;
-      color: #333;
+    footer {
+      width: 100%;
+      background: linear-gradient(13deg, #272727 0%, #7e7e7e 50%, #e4e4e4 100%);
+      color: black;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+      position: relative;
+      left: 0;
     }
     @media (max-width: 768px) {
-        .carrosel-item img{
-            width: 250px;
-            height: auto;
-        }
-        p {
-           font-size: 1rem;
-        }
-        h1, h2 {
-           font-size: 1.8rem;
-        }
+      .carousel-item img {
+        width: 100%;
+        height: auto;
+      }
+      h1, h2 {
+        font-size: 1.8rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
-</style>
+  </style>
 </head>
 <body>
-<!-- Conteúdo da página aqui -->
- <header>
+  <header>
     <h1>Como Treinar seu Dragão</h1>
- </header>
- <main>
-  <div>
-    <p>"Como Treinar o Seu Dragão"</p>
-  </div>
-    <h2>O Que é?</h2>
-    <p>How to Train Your Dragon(Como Treinar o Seu Dragão) é um filme de fantasia em animação computadorizada norte-americano vagamente baseado no livro de 2003 de mesmo nome de Cressida Cowell, produzido pela DreamWorks Animation e distribuído pela Paramount Pictures.<br>
-       O filme foi dirigido por Chris Sanders e Dean DeBlois a partir do roteiro de Will Davies, Sanders e DeBlois, e estrelou as vozes de Jay Baruchel, America Ferrera, Gerard Butler, Craig Ferguson, Jonah Hill, T.J. Miller, Kristen Wiig, Kristen Wiig e Christopher Mintz-Plasse.</p>
-    <h2>Sinopse</h2>
-    <p>O filme é ambientado em um mundo mítico de Vikings e dragões.<br>
+  </header>
+  <main>
+    <section>
+      <p>"Como Treinar o Seu Dragão"</p>
+      <h2>O Que é?</h2>
+      <p>How to Train Your Dragon(Como Treinar o Seu Dragão) é um filme de fantasia em animação computadorizada norte-americano vagamente baseado no livro de 2003 de mesmo nome de Cressida Cowell, produzido pela DreamWorks Animation e distribuído pela Paramount Pictures<br>
+       O filme foi dirigido por Chris Sanders e Dean DeBlois a partir do roteiro de Will Davies, Sanders e DeBlois, e estrelou as vozes de Jay Baruchel, America Ferrera, Gerard Butler, Craig Ferguson, Jonah Hill, T.J. Miller, Kristen Wiig, Kristen Wiig e Christopher Mintz-Plasse.
+      </p>
+      <h2>Sinopse</h2>
+      <p>O filme é ambientado em um mundo mítico de Vikings e dragões.<br>
       A história gira em torno de um garoto de 15 anos chamado Soluço, que vive na ilha de Berk, onde os combates entre vikings e dragões são um modo de vida.<br>
       Soluço é o filho do respeitado Viking Stoico, líder da aldeia, porém, diferente de seu pai, ele é visto como uma fonte de problemas. No entanto, quando Soluço encontra a raça mais poderosa dos dragões, o Fúria da Noite, ele vê sua chance de provar que ele tem tudo para ser o melhor dos vikings.<br>
-      Depois que ele captura esse dragão com um canhão de disparo de rede, Soluço não consegue matá-lo, solta-o e acaba fazendo amizade com o dragão, a quem ele chama de Banguela. Esta relação é posta a prova quando ele se esforça para convencer sua tribo, principalmente seu pai, de que os dragões não são o que eles acharam e que sua tribo não precisam ser matadores de dragão.</p>
-
-<div id="carouselExampleAutoplay" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://i.pinimg.com/1200x/3b/94/48/3b94486ff57d00e09a95900bbfe2b5d9.jpg" alt="Como Treinar o Seu Dragão 1">
+      Depois que ele captura esse dragão com um canhão de disparo de rede, Soluço não consegue matá-lo, solta-o e acaba fazendo amizade com o dragão, a quem ele chama de Banguela. Esta relação é posta a prova quando ele se esforça para convencer sua tribo, principalmente seu pai, de que os dragões não são o que eles acharam e que sua tribo não precisam ser matadores de dragão.
+      </p>
+    </section>
+    <section class="carousel slide carousel-fade" id="carouselExampleAutoplay" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://i.pinimg.com/1200x/3b/94/48/3b94486ff57d00e09a95900bbfe2b5d9.jpg" alt="Poster do primeiro filme">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/1200x/d4/ef/e8/d4efe848d25edfa619fc80dfdc81b556.jpg" alt="Poster do segundo filme">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/1200x/56/9b/32/569b32cf76c1f37d381b5677deee65f4.jpg" alt="Poster do terceiro filme">
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://i.pinimg.com/1200x/d4/ef/e8/d4efe848d25edfa619fc80dfdc81b556.jpg" alt="Como Treinar o Seu Dragão 2">
+    </section>
+    <section id="curiosidades">
+      <h2>Curiosidades</h2>
+      <div class="caixas-flutuantes">
+        <div class="caixa">
+         <div class="caixa">
+           <h3>1. A cena do “toque” surgiu como erro</h3>
+           <p>A hesitação de Banguela ao ser tocado por Soluço foi acidental, mas os animadores acharam a reação do personagem “perfeita”, os fazendo mantê-la na versão final.</p>
+           <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZE6XnL2qx6g6EuQMHhfDBuI0KWXsBBdZ81q1Q8W7SjUDrkHznKx29xd3bxloNle9v6iLsFVvSvDdZs6afIYDu5PVBZ49OtlygqH_WOTfzD8ZhhtiW4HWvayQQqxQY5Z5ezHdlpGfx1DeBFav_vYXb-zz7OPZETeSQiq88ic1daHIpuHy5UlmcA_8RsuPr/s640/HICTOO.jpg" alt="Toque entre Soluço e Banguela" loading="lazy">
+         </div>
+         <div class="caixa">
+           <h3>2. Baseado em livro infantil</h3>
+           <p>O filme é inspirado no livro de Cressida Cowell de 2003. A história original é diferente, mas os temas centrais de amizade e aceitação permanecem.</p>
+           <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2025/06/91wj6lehu6l_ac_uf10001000_ql80_dpweblab___sg11124yq.jpg" alt="Livro original" loading="lazy">
+         </div>
+         <div class="caixa">
+           <h3>3. Aumento na adoção de gatos pretos</h3>
+           <p>O visual de Banguela foi inspirado por diversos animais. Porém uma inspiração que se destacou foram os gatos pretos que influenciou positivamente a adoção desses animais após o lançamento do filme.</p>
+           <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2025/06/jpygjj20eiw81__2p7jlu5wr-760x380.jpg" alt="Gato preto parecido com Banguela" loading="lazy">
+         </div>
+       </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://i.pinimg.com/1200x/56/9b/32/569b32cf76c1f37d381b5677deee65f4.jpg" alt="Como Treinar o Seu Dragão 3">
+    </section>
+    <section id="trilha">
+      <h2>Trilha Sonora dos Filmes</h2>
+      <div class="caixas-flutuantes">
+        <div class="caixa">
+          <h3>Filme 1 (2010)</h3>
+          <p>Composta por John Powell, A trilha sonora combina elementos épicos com momentos mais íntimos, refletindo a aventura e a relação entre Soluço e Banguela.</p>
+          <p>"Forbidden Friendship", "Test Drive", "Romantic Flight" são algumas das faixas mais conhecidas e apreciadas.
+        </div>
+        <div class="caixa">
+          <h3>Filme 2 (2014)</h3>
+          <p>Powell retorna com uma trilha sonora que expande o universo musical do primeiro filme, introduzindo novos temas e motifs que refletem o crescimento dos personagens e a expansão do mundo de Berk.</p>
+          <p>Faixas como "Where No One Goes" e "Flying with Mother" são destaques, trazendo uma mistura de emoção e aventura.</p>>
+        </div>
+        <div class="caixa">
+          <h3>Filme 3 (2019)</h3>
+          <p>John Powell retorna para trazer uma conclusão épica para a trilogia. A trilha sonora explora temas de despedida e a busca por um lar, com músicas que evocam a beleza e o mistério do Mundo Oculto dos dragões.</p>
+          <p>"The Hidden World Suite", "Once There Were Dragons", "Together From Afar" (com Jonsi) são faixas importantes que se destacam, proporcionando uma experiência emocional profunda.</p>
+        </div>
       </div>
-    </div>
-</div>
-<div class="caixas-flutuantes">
-  <div class="caixa">
-    <h3>Curiosidades</h3>
-  </div>
-  <div class="caixa">
-    <h3>1. A cena do “toque” surgiu como um erro<h3>
-    <p>a hesitação que Banguela mostra ao ser tocado por Soluço foi um erro, porém, os animadores acharam a reação do personagem “perfeita”, os fazendo mantê-la na versão final.</p>
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiZE6XnL2qx6g6EuQMHhfDBuI0KWXsBBdZ81q1Q8W7SjUDrkHznKx29xd3bxloNle9v6iLsFVvSvDdZs6afIYDu5PVBZ49OtlygqH_WOTfzD8ZhhtiW4HWvayQQqxQY5Z5ezHdlpGfx1DeBFav_vYXb-zz7OPZETeSQiq88ic1daHIpuHy5UlmcA_8RsuPr/s640/HICTOO.jpg" alt="Curiosidade 1">
-  </div>
-  <div class="caixa">
-    <h3>2. A história é baseada em um livro infantil<h3>
-    <p>O filme é baseado no livro de Cressida Cowell, que foi publicado em 2003. A história original é um pouco diferente, mas os temas centrais de amizade e aceitação permanecem.</p>
-    <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2025/06/91wj6lehu6l_ac_uf10001000_ql80_dpweblab___sg11124yq.jpg" alt="Curiosidade 2">
-  </div>
-  <div class="caixa">
-    <h3>3. Filme gerou um aumento na doação de gatos pretos<h3>
-    <p>Não é novidade que o design de Banguela foi inspirado por diversos animais, como cachorros e cavalos. Porém, uma inspiração que se destacou foram os gatos pretos. Após o lançamento do primeiro filme, diversos abrigos noticiaram que houve um aumento de doações de gatos pretos por conta da popularidade do Banguela.</p>
-    <img src="https://uploads.jovemnerd.com.br/wp-content/uploads/2025/06/jpygjj20eiw81__2p7jlu5wr-760x380.jpg" alt="Curiosidade 3">
-</div>
-<h2>Trilha Sonora dos Filmes</h2>
-<div class="caixas-flutuantes">
-  <div class="caixa">
-  <div class="caixa">
-    <h3>Como Treinar o Seu Dragão (2010)</h3>
-    <p>A trilha sonora foi composta por John Powell. A trilha sonora combina elementos épicos com momentos mais íntimos, refletindo a aventura e a relação entre Soluço e Banguela.<br>
-     "Forbidden Friendship", "Test Drive", "Romantic Flight" são algumas das faixas mais conhecidas e apreciadas.</p>
-  </div>
-  <div class="caixa">
-    <h3>Como Treinar o Seu Dragão 2 (2014)</h3>
-    <p>John Powell retornou para compor a trilha sonora do segundo filme. A trilha sonora expande o universo musical do primeiro filme, introduzindo novos temas e motifs que refletem o crescimento dos personagens e a expansão do mundo de Berk. <br>
-      Faixas como "Where No One Goes" e "Flying with Mother" são destaques, trazendo uma mistura de emoção e aventura.</p>
-  </div>
-  <div class="caixa">
-    <h3>Como Treinar o Seu Dragão 3: O Mundo Escondido (2019)</h3>
-    <p>John Powell novamente compôs a trilha sonora, trazendo uma conclusão épica para a trilogia. A trilha sonora explora temas de despedida e a busca por um lar, com músicas que evocam a beleza e o mistério do Mundo Oculto dos dragões.<br>
-      "The Hidden World Suite", "Once There Were Dragons", "Together From Afar" (com Jonsi) são faixas importantes que se destacam, proporcionando uma experiência emocional profunda.</p>
-  </div>
-</div>    
-  <div>
-    <h2>A franquia</h2>>
-    <p>A franquia "Como Treinar o Seu Dragão" consiste em três filmes principais, lançados entre 2010 e 2019.<br>
-      Os filmes, em ordem cronológica, são: "Como Treinar o Seu Dragão" (2010), "Como Treinar o Seu Dragão 2" (2014) e "Como Treinar o Seu Dragão 3: O Mundo Escondido" (2019).<br>
-      Além dos filmes, a franquia inclui séries como "Dragões: Pilotos de Berk" e "Dragões: Defensores de Berk", além de especiais como "A Lenda do Dragão Quebra-Ossos" e "O Presente da Fúria da Noite".</p>
-    <h2>1. Como Treinar o Seu Dragão (2010):</h2>
-    <p>Apresenta a história de Soluço, um jovem viking que se torna amigo de um dragão chamado Banguela.</p>
-    <h2>2. Como Treinar o Seu Dragão 2 (2014):</h2>
-    <p>Cinco anos após o primeiro filme, Soluço e Banguela exploram novos mundos e descobrem uma ameaça antiga.</p>
-    <h2>3. Como Treinar o Seu Dragão 3: O Mundo Escondido (2019):</h2>
-    <p>Soluço e Banguela encontram um novo lar para os dragões e enfrentam seu maior desafio.</p>
-  </div>
-  <div>
-    <h2>Outras produções:</h2><br>
-    <h2>Séries</h2>
-    <p>"Pilotos de Berk", "Defensores de Berk", e "Corrida para o Limite" expandem o universo e aprofundam a relação entre vikings e dragões.</p>
-    <h2>Especiais</h2>
-    <p>Curtas-metragens como "A Lenda do Dragão Quebra-Ossos" e "O Presente da Fúria da Noite" oferecem histórias adicionais e momentos divertidos do mundo de "Como Treinar o Seu Dragão".</p>
-</main>
- <footer>
+    </section>
+    <section id="franquia">
+      <h2>A franquia</h2>
+      <p>A franquia é composta por três filmes  "Como Treinar o Seu Dragão" (2010), "Como Treinar o Seu Dragão 2" (2014) e "Como Treinar o Seu Dragão 3: O Mundo Escondido" (2019).</p>
+      <p>Além dos filmes, a franquia inclui séries e curtas expandindo o universo dos filmes</p>
+    </section>
+    <section>
+      <h2>Outras Produções</h2>
+      <h3>Séries</h3>
+      <p>"Pilotos de Berk", "Defensores de Berk", e "Corrida para o Limite" aprofundam a relação entre vikings e dragões.</p>
+      <h3>Especiais</h3>
+      <p>Curtas como “A Lenda do Dragão Quebra-Ossos” e "O Presente da Fúria da Noite" oferecem histórias adicionais do mundo dos dragões.</p>
+    </section>
+  </main>
+  <footer>
     <p>&copy; 2025 - Site criado para atividade da disciplina de Programação Web Front-End</p>
- </footer>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<!-- nao mudei muita coisa, eu só arumei alguns erros, separei as fontes que tava usando, dei uma arumada no css, deixei a responsividade melhor(antes era apenas a imagem e texto) e coloquei o section que vi no visual studio e procurei no youtube(Tag section do HTML 5 - hcode) -->
 </html>
